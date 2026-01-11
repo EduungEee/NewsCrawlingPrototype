@@ -68,7 +68,7 @@ URL: {url}
 """
             
             response = self.client.chat.completions.create(
-                model="gpt-3.5-turbo",
+                model="GPT-4 mini",
                 messages=[
                     {"role": "system", "content": "당신은 전문적인 뉴스 분석가입니다. 뉴스를 정확하고 상세하게 요약하는 것이 전문입니다."},
                     {"role": "user", "content": prompt}
@@ -89,5 +89,6 @@ URL: {url}
             
         except Exception as e:
             return f"❌ 뉴스 요약 중 오류가 발생했습니다: {str(e)}"
+
 
 
